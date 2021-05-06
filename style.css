@@ -1,0 +1,435 @@
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden;
+}
+html{
+    scroll-behavior: smooth;
+    font-size: 10px;
+}
+section{
+    padding: 3.9rem 0;
+}
+img{
+    width: 100%;
+    max-width: 100%;
+}
+a{
+    text-decoration: none;
+}
+p{
+    font-size: 1.6rem;
+}
+.container{
+    width: 100%;
+    max-width: 122.5rem;
+    margin: 0 auto;
+    padding: 0 2.4rem;
+}
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 11;
+    background: linear-gradient(to bottom,rgba(0,0,0,0.5),transparent);
+}
+.nav{
+    height: 7.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo{
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+}
+.menu-toggle{
+    position: absolute;
+    top: 20px;
+    transform:translateY(-50%);
+    color: black;
+    right: 4rem;
+    cursor: pointer;
+    z-index: 1500;
+    font-size: 2.2rem;
+    position: fixed;
+}
+.fa-bars{
+    position: fixed;
+}
+.fa-times{
+    display: none;
+}
+.nav-list{
+    width: 80%;
+    height: 100vh;
+    background-color:rgba(0, 0, 0, 0.699);
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 4.4rem;
+    list-style: none;
+    transform: translateX(-100%);
+    transition: transform .5s;
+}
+
+.fa-bars.open{
+    display: none;
+}
+.nav-list.open{
+    transform: translateX(0);
+}
+.fa-times.open{
+    display: block;
+}
+.item{
+    border-bottom: 1px solid white;
+}
+.nav-link{
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1rem;
+    margin-right: -4px;
+    padding-bottom: 5px;
+}
+.nav-link:hover{
+    padding-left: 1em;
+    transition: 1s ease;
+}
+.hero{
+    background: url('img/Zoom_background_Canada_8_Yana_Photography_web\(pp_w768_h422\).jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    display: flex;
+    align-self: center;
+    text-align: center;
+    padding-top: 20%;
+}
+.sub-headline{
+    color: rgb(141, 221, 11);
+    font-style: italic;
+    font-size: 5rem;
+    letter-spacing: -.10px;
+    font-weight: 100;
+    text-shadow: 0 0 5px rgba(0,0,0,1);
+    animation: fadeup .5s forwards;
+    animation-delay: .5s;
+    opacity: 0;
+}
+.first-letter{
+    font-size: 6rem;
+}
+.headline{
+    font-size: 3rem;
+    font-weight: 900;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: -14px;
+    letter-spacing: -1px;
+    animation: scale 1s ease;
+}
+.line{
+    background-color: #111111;
+    max-width: 8.2rem;
+    position: relative;
+    width: 100%;
+    height: .3rem;
+    animation: grow 2s forwards;
+    animation-delay: .9s;
+    opacity: 0;
+}
+.seperator{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.line-left::before,
+.line-right::before{
+    content: '';
+    transform: translateY(-50%);
+    border: .6rem solid transparent;
+    top: 50%;
+    position: absolute;
+    animation: grow 2.5s forwards;
+    opacity: 0;
+}
+.line-right::before{
+    border-right-color: #111;
+    right: 0;
+}
+.line-left::before{
+    border-left-color: #111;
+    left: 0;
+}
+.asterisk{
+    color:  rgb(89, 141, 5);
+    margin: 0 1.6rem;
+    font-size: 1.2rem;
+    animation: spin 1s forwards;
+    opacity: 0;
+    animation-delay: .8s;
+}
+.headline-description h5{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 100;
+    margin-right: -3px;
+    margin-bottom: 1.2rem;
+    animation: fadedown 1s forwards;
+    opacity: 0;
+    animation-delay: 1.5s;
+}
+.cta-btn{
+    padding: .5rem  1.2rem;
+    animation: scale1 1s forwards;
+    opacity: 0;
+    animation-delay: 2s;
+}
+.btn{
+    background-color: white;
+    color: black;
+    font-size: 1rem;
+    border-radius: .5rem;
+    letter-spacing: .5px;
+    transition: .5s;
+    text-transform: uppercase;
+}
+.cta-btn:hover{
+    background-color: rgb(89, 141, 5);
+    color: white;
+}
+.restaurent-info-img img{
+    width: 400px;
+    margin-top: 1.5rem;
+}
+.restaurent-info-img{
+   padding: 10em;
+}
+.global-headline{
+    margin-top: 3.9rem;
+    text-align: center;
+    padding: 2em;
+}
+.global-headline .seperator{
+    margin: 1.5rem 0;
+}
+.restaurent-description p{
+    line-height: 1.6;
+    margin-bottom: 2.4rem;
+    width: 350px;
+}
+.restaurent-description{
+    display: flex;
+    justify-content: space-between;
+    padding: 2em;
+}
+.body-btn{
+    margin-bottom: 1rem;
+    border-bottom: 2px solid  rgb(89, 141, 5);
+    border-radius: 0;
+    transition:all .5s ;
+    color:  rgb(89, 141, 5);
+    letter-spacing: 1px;
+    margin-top: 1em;
+}
+.body-btn:hover{
+    color:black;
+    border-bottom: 2px solid black;
+}
+#tastefull-recipies{
+    background: url('img/Zoom_background_Canada_8_Yana_Photography_web\(pp_w768_h422\).jpg') center no-repeat;
+    background-size: cover;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.image-group{
+    display: grid;
+    grid-template-columns: repeat(2,2fr);
+    grid-gap:1.5rem ;
+    margin-left: 12%;
+}
+.image-group img{
+    height: 300px;
+    width: 350px;
+    padding-top: 20px;
+}
+.restaurent-description{
+    align-items: center;
+}
+#discover-recipies{
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 5em;
+    clear: both;
+}
+.animate-bottom{
+    width: 300px;
+    line-height: 1.5;
+}
+#footer{
+    background: rgb(87, 81, 81);
+    align-items: center;
+    color: white;
+    text-align: center;
+    font-size: .87rem;
+ }
+ .footer-row{
+    padding-top: 7em;
+ }
+ .footer-row h1{
+     font-size: 1.5rem;
+     font-weight: 600;
+     color:rgb(32, 141, 230);
+     padding-bottom: 10px;
+     text-align: center;
+     margin: .5em 0;
+ }
+ .features-list li{
+     font-size: 1.4rem;
+ }
+ .footer-row {
+     font-size: .78rem;
+ }
+ .contact-1,.follow-1{
+     display: flex;
+     padding-top: 10px;
+ }
+ .contact-1 i,.follow-1 i{
+     padding-right: 10px;
+     color: white;
+     font-size:25px;
+     cursor: pointer;
+ }
+ .contact-1 i:hover{
+     color: black;
+     transition: .4s ease;
+ }
+ .follow-1 i:hover{
+    color: black;
+    transition: .4s ease;
+}
+ .features-list{
+     list-style: none;
+ }
+ .info{
+     margin-left: 43%;
+ }
+ .footer-last p{
+     padding-top: 10px;
+ }
+ hr{
+     margin-top: 10px;
+     border-bottom: 1px solid rgba(119, 111, 111, 0.548);
+ }
+ .color{
+     color: red;
+ }
+ @keyframes fadeup{
+    0%{
+         transform: translateY(4rem);
+         opacity: 0;
+    }
+    100%{
+         transform: translateY(0);
+         opacity: 1;
+    }
+}
+@keyframes scale{
+    0%{
+         transform: scale(2);
+         opacity: 0;
+    }
+    100%{
+         transform: scale(1);
+         opacity: 1;
+    }
+}
+@keyframes grow{
+    0%{
+         width: 0;
+         opacity: 0;
+    }
+    100%{
+         width: 100%;
+         opacity: 1;
+    }
+}
+@keyframes fadedown{
+    0%{
+         transform: translateY(-1em);
+         opacity: 0;
+    }
+    100%{
+         transform: translateY(0);
+         opacity: 1;
+    }
+}
+@keyframes spin{
+    0%{
+         transform: rotate(0deg);
+         opacity: 0;
+    }
+    100%{
+         transform: rotate(-360deg);
+         opacity: 1;
+    }
+}
+@keyframes scale1{
+    0%{
+         transform: scale(2.5);
+         opacity: 0;
+    }
+    100%{
+         transform: scale(1);
+         opacity: 1;
+    }
+}
+@media screen and (max-width:600px){
+    .restaurent-description{
+        display: block;
+        padding: 0;
+    }
+    .restaurent-info-img img{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    .animate-bottom{
+        margin-left: 12%;
+    }
+    .image-group{
+        display: flex;
+        flex-direction: column;
+        margin-left: 15px;
+    }
+    .image-group img{
+        width: 100%;
+    }
+    .headline-dark1{
+        padding-right: 20%;
+    }
+    #discover-recipies{
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+    .contact-1{
+        margin-left: -15%;
+    }
+}
+
